@@ -117,9 +117,12 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]# using the BASE_DIR to mount the static files 
 
+MEDIA_URL = '/media/' # telling django that i will get images
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # Root of media 
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-NPM_BIN_PATH = "C:/Program Files/nodejs/npm.cmd"
+NPM_BIN_PATH = "C:/Program Files/nodejs/npm.cmd" # mounting the npm manually if the project can't find npm 
 
