@@ -7,5 +7,16 @@
 
 {% block content %}
      <h1>All types of available chai</h1>
+     <div class="grid grid-cols-3 gap-4">
+        {% for chai in chais %}
+            <div class="chai_item">
+                <h3>{{ chai.name }}</h3>
+                <img src="{{ chai.image.url }}" alt="">
+            </div>
+        {% endfor %}
+    </div>
+
 {% endblock %}
-    
+
+# start tailwind
+# python manage.py tailwind start
