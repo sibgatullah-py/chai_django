@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+    Chai Detsails page
+{% endblock %}
+
+
+{% block content %}
+<h1 class="text-center text-3xl py-6">Chai Details Page</h1>
+
+<div class="flex flex-col items-center justify-center min-h-screen">
+    <img class="w-[230px] h-[220px] rounded" src="{{ chai.image.url }}" alt="">
+    <h3 class="text-yellow-400 text-3xl font-medium py-2">{{ chai.name }}</h3>
+    <p class="py-2 text-[16px]">{{ chai.description }}</p>
+</div>
+{% endblock %}
+    
+    

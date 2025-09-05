@@ -12,7 +12,9 @@ class ChaiVaraity(models.Model):
     name = models.CharField(max_length=100)
     image = models.ImageField(upload_to='chais/', blank=True, null=True)
     date_added = models.DateTimeField(default=timezone.now)# adding the time when the model was added in database
-    type = models.CharField(max_length=2,choices=CHAI_TYPE_CHOICE)\
+    type = models.CharField(max_length=2,choices=CHAI_TYPE_CHOICE)
+    description = models.TextField(max_length=500, default="No description")
+    price = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
         
         
         
