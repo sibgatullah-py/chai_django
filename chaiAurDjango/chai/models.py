@@ -1,4 +1,4 @@
-from django.db import models
+from django.db import models #Inside models, Django defines different field classes (CharField, IntegerField, DateTimeField, etc.) and also the base class Model.
 from django.utils import timezone
 class ChaiVaraity(models.Model):
     CHAI_TYPE_CHOICE = [ # a list (array) of tuples. Each tuple represents a choice, with a value and a human-readable name.
