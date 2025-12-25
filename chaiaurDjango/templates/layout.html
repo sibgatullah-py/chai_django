@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>
+        
+        {% block title %}
+            Chai
+        {% endblock title %}
+            
+    </title>
+</head>
+<body>
+    
+    <nav>This is our navbar</nav>    
+
+    
+    {% block content %}
+        
+    {% endblock content %}
+        
+
+</body>
+</html>
