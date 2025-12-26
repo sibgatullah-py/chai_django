@@ -19,3 +19,7 @@ class ChaiVarity(models.Model):
     image = models.ImageField(upload_to='chais/')
     date = models.DateTimeField(default=timezone.now)
     tea_type = models.CharField(max_length=2, choices= CHAI_TYPE_CHOICE)
+
+
+    def __str__(self): # This dunder method is returning the name of the item in the database 
+        return self.name

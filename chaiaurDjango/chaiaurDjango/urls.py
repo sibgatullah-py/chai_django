@@ -31,4 +31,4 @@ urlpatterns = [
     
     
     path("__reload__/", include("django_browser_reload.urls")), # Hot reload
-] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT) # url pattern for images and other media files 
+] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT) # additional url pattern for images and other media files 
