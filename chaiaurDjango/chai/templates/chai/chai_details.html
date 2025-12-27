@@ -9,7 +9,59 @@
 
 {% block content %}
     
-    
+    <div class="min-h-screen flex items-center justify-center bg-gray-100 p-6">
+        <div class="max-w-4xl w-full bg-white rounded-3xl shadow-lg overflow-hidden">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2">
+            
+                <!-- Product Image -->
+                <div class="h-full">
+                    <img
+                    src="{{ chai.image.url }}"
+                    alt="{{ chai.name }}"
+                    class="w-full h-full object-cover"
+                    />
+                </div>
+
+                <!-- Product Details -->
+                <div class="p-8 flex flex-col justify-between">
+                    
+                    <div>
+                        <h1 class="text-3xl font-extrabold text-gray-800">
+                            {{ chai.name }}
+                        </h1>
+
+                        <p class="text-gray-600 mt-4 leading-relaxed">
+                            {{ chai.description }}
+                        </p>
+
+                        <!-- Extra Details -->
+                        <ul class="mt-6 space-y-2 text-sm text-gray-700">
+                            <li><span class="font-semibold">Size:</span> Large</li>
+                            <li><span class="font-semibold">Ingredients:</span> Tea leaves, milk, spices</li>
+                            <li><span class="font-semibold">Served:</span> Hot</li>
+                        </ul>
+                    </div>
+
+                    <!-- Price & Buy Button -->
+                    <div class="mt-8 flex items-center justify-between">
+                        <span class="text-2xl font-bold text-amber-600">
+                            ৳{{ chai.price }}
+                        </span>
+
+                        <button
+                            class="px-8 py-3 bg-amber-600 text-white rounded-xl font-semibold hover:bg-amber-700 transition"
+                        >
+                            Buy Now
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     
 {% endblock content %}
     

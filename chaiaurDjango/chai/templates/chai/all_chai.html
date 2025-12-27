@@ -7,18 +7,43 @@
     
 
 {% block content %}
-    <h1 class="font-black text-white text-3xl">All types of available chai</h1>
+    <h1 class="font-black text-green-600 text-3xl pt-10">All types of available chai</h1>
     <p class="text-center px-[400px] py-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, repellendus! Recusandae earum ad delectus repudiandae?</p>
 
-    <div class="grid grid-cols-3 gap-4 m-4">
+    <div class="grid grid-cols-3 gap-4 m-4 place-items-center">
+
         {% for chai in chais %}
-            <div class="chai-item bg-green-900 rounded text-center items-center flex-col drop-shadow-2xl pb-4">
-                <img class="rounded h-70 mx-auto" src="{{chai.image.url}}" alt="">
-                <h2 class="font-bold text-3xl py-2">{{chai.name}}</h2>
-                <p class="pb-1.5 text-white font-black">{{chai.tea_type}}-{{chai.id}}</p>
-                <a href="{% url 'chai_details' chai.id %}" class="bg-green-600 hover:bg-green-500 transition-all  duration-300 text-white hover:text-green-900 px-4 !py-2 rounded-b-md shadow hover:[box-shadow:0_-4px_10px_rgba(0,0,0,0.2)]">
-                    <button type="button" class="cursor-pointer w-100">Details</button>
-                </a>
+            <div class="max-w-sm bg-blue-50 rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                <!-- Product Image -->
+                <img
+                    src="{{chai.image.url}}"
+                    alt="Product image"
+                    class="w-full h-48 object-cover"
+                />
+
+                <!-- Card Content -->
+                <div class="p-5">
+                    <h3 class="text-xl font-semibold text-gray-800">
+                    Masala Tea
+                    </h3>
+
+                    <p class="text-sm text-gray-600 mt-2">
+                    {{chai.description}}
+                    </p>
+
+                    <!-- Price & Action -->
+                    <div class="flex items-center justify-between mt-4">
+                        <span class="text-lg font-bold text-gray-900">
+                            ৳{{chai.price}}
+                        </span>
+                        <a href="{% url 'chai_details' chai.id %}">
+                            <button class="px-4 py-2 text-sm font-medium text-white bg-amber-600 rounded-lg hover:bg-amber-700 transition">
+                                View Details
+                            </button>
+                        </a>
+                    
+                    </div>
+                </div>
             </div>
         {% endfor %}
     </div>

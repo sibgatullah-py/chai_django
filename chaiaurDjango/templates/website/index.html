@@ -7,6 +7,82 @@
     
 
 {% block content %}
-    <h1>Chai aur Django | Home page</h1>
+  <!-- Hero Section -->
+<section class="bg-gradient-to-r from-emerald-600 to-green-500 text-white">
+    <div class="max-w-7xl mx-auto px-6 py-20 text-center">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">
+            Discover the Art of Tea
+        </h2>
+        <p class="text-lg mb-8">
+            Handpicked leaves, calming flavors, and moments of peace.
+        </p>
+        <a href="#"
+           class="bg-white text-emerald-700 px-8 py-3 rounded-full font-semibold hover:bg-emerald-100 transition">
+            Shop Now
+        </a>
+    </div>
+</section>
+
+<!-- Featured Teas -->
+<section class="py-16">
+    <div class="max-w-7xl mx-auto px-6">
+        <h3 class="text-3xl font-bold text-center mb-12 text-emerald-700">
+            Our Best Sellers
+        </h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Tea Card -->
+            <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-6 text-center">
+                <img src="" alt="Green Tea"
+                     class="h-40 mx-auto mb-4 object-contain">
+                <h4 class="text-xl font-semibold mb-2">Green Tea</h4>
+                <p class="text-sm text-gray-600 mb-4">
+                    Fresh, light, and full of antioxidants.
+                </p>
+                <span class="font-bold text-emerald-700">$12.99</span>
+            </div>
+
+            <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-6 text-center">
+                <img src="" alt="Black Tea"
+                     class="h-40 mx-auto mb-4 object-contain">
+                <h4 class="text-xl font-semibold mb-2">Black Tea</h4>
+                <p class="text-sm text-gray-600 mb-4">
+                    Bold flavor for an energetic start.
+                </p>
+                <span class="font-bold text-emerald-700">$10.99</span>
+            </div>
+
+            <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-6 text-center">
+                <img src="" alt="Herbal Tea"
+                     class="h-40 mx-auto mb-4 object-contain">
+                <h4 class="text-xl font-semibold mb-2">Herbal Tea</h4>
+                <p class="text-sm text-gray-600 mb-4">
+                    Relaxing blends for calm evenings.
+                </p>
+                <span class="font-bold text-emerald-700">$11.99</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="bg-emerald-700 text-white py-16">
+    <div class="max-w-4xl mx-auto text-center px-6">
+        <h3 class="text-3xl font-bold mb-4">
+            Brew Better Moments
+        </h3>
+        <p class="mb-6">
+            Join thousands of tea lovers who trust Tea Haven.
+        </p>
+        <a href="#"
+           class="bg-white text-emerald-700 px-8 py-3 rounded-full font-semibold hover:bg-emerald-100 transition">
+            Explore Collection
+        </a>
+    </div>
+</section>
+
+
 {% endblock content %}
     
+
+{% comment %} {% url 'chai_list' %} {% endcomment %}

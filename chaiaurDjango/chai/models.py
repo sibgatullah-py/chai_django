@@ -20,6 +20,7 @@ class ChaiVarity(models.Model):
     date = models.DateTimeField(default=timezone.now)
     tea_type = models.CharField(max_length=2, choices= CHAI_TYPE_CHOICE)
     description = models.TextField(default='', null=True)
+    price = models.IntegerField(default=0,null=False)
 
 
     def __str__(self): # This dunder method is returning the name of the item in the database 
