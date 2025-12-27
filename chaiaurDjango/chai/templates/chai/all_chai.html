@@ -9,5 +9,23 @@
 {% block content %}
     <h1 class="font-black text-white text-3xl">All types of available chai</h1>
     <p class="text-center px-[400px] py-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, repellendus! Recusandae earum ad delectus repudiandae?</p>
+
+    <div class="grid grid-cols-3 gap-4 m-4">
+        {% for chai in chais %}
+            <div class="chai-item bg-green-900 rounded text-center items-center flex-col drop-shadow-2xl pb-4">
+                <img class="rounded h-70 mx-auto" src="{{chai.image.url}}" alt="">
+                <h2 class="font-bold text-3xl py-2">{{chai.name}}</h2>
+                <p class="pb-1.5 text-white font-black">{{chai.tea_type}}-{{chai.id}}</p>
+                <a href="#" class="bg-green-600 hover:bg-green-400 transition-all  duration-300 text-white hover:text-green-900 px-4 !py-2 rounded-xl shadow hover:[box-shadow:0_-4px_10px_rgba(0,0,0,0.2)]">
+                    <button type="button" class="cursor-pointer w-100">Details</button>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock content %}
+
+
+
+
+    
     
