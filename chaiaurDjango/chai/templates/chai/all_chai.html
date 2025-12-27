@@ -16,7 +16,7 @@
                 <img class="rounded h-70 mx-auto" src="{{chai.image.url}}" alt="">
                 <h2 class="font-bold text-3xl py-2">{{chai.name}}</h2>
                 <p class="pb-1.5 text-white font-black">{{chai.tea_type}}-{{chai.id}}</p>
-                <a href="#" class="bg-green-600 hover:bg-green-400 transition-all  duration-300 text-white hover:text-green-900 px-4 !py-2 rounded-xl shadow hover:[box-shadow:0_-4px_10px_rgba(0,0,0,0.2)]">
+                <a href="{% url 'chai_details' chai.id %}" class="bg-green-600 hover:bg-green-500 transition-all  duration-300 text-white hover:text-green-900 px-4 !py-2 rounded-b-md shadow hover:[box-shadow:0_-4px_10px_rgba(0,0,0,0.2)]">
                     <button type="button" class="cursor-pointer w-100">Details</button>
                 </a>
             </div>
