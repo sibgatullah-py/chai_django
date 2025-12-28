@@ -8,17 +8,20 @@ class ChaiVarity(models.Model):
     which can then be used to provide clear, type-safe choices for model fields
     '''
     CHAI_TYPE_CHOICE = [
-        ('ML', 'MASALA TEA'),
-        ('GR', 'GINGER TEA'),
-        ('KL', 'KIWI TEA'),
-        ('EL', 'ELACHI TEA'),
-        ('PL', 'PLAIN TEA'),
+        ('MLT', 'MASALA TEA'),
+        ('GRT', 'GINGER TEA'),
+        ('KLT', 'KIWI TEA'),
+        ('ELT', 'ELACHI TEA'),
+        ('GT', 'GREEN TEA'),
+        ('BLT', 'BLACK TEA'),
+        ('HET', 'HERBAL TEA'),
+        ('MLT', 'MILK TEA'),
     ]
     
     name = models.CharField(max_length=100)
     image = models.ImageField(upload_to='chais/')
     date = models.DateTimeField(default=timezone.now)
-    tea_type = models.CharField(max_length=2, choices= CHAI_TYPE_CHOICE)
+    tea_type = models.CharField(max_length=5, choices= CHAI_TYPE_CHOICE)
     description = models.TextField(default='', null=True)
     price = models.IntegerField(default=0,null=False)
 
