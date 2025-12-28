@@ -17,7 +17,7 @@ A Django web application built with Tailwind CSS.
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/YOUR-REPO-NAME.git
+git clone https://https://github.com/sibgatullah-py/chai_django.git
 cd chai_django
 
 ---
