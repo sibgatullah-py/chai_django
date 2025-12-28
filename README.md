@@ -1,87 +1,67 @@
-📥 Step 1: Download the project
-Option A: Using Git (recommended)
+# ChaiAurDjango
+
+A Django web application built with Tailwind CSS.
+
+---
+
+## Requirements
+
+- Python 3.10+
+- pip
+- Virtual environment (recommended)
+
+---
+
+## Installation
+
+Clone the repository:
+
+```bash
 git clone https://github.com/YOUR-USERNAME/YOUR-REPO-NAME.git
+cd chai_django
 
-Option B: Without Git
+---
 
-Click the green Code button on GitHub
-
-Click Download ZIP
-
-Extract the ZIP file
-
-Then open the project folder.
-
-🧪 Step 2: Create a virtual environment
-
-Inside the project folder, run:
+# Create and activate the virtual environment:
 
 python -m venv venv
+source venv/bin/activate   # Linux / macOS
+venv\Scripts\activate      # Windows
 
-Activate it
+---
 
-Windows
-
-venv\Scripts\activate
-
-
-Mac / Linux
-
-source venv/bin/activate
-
-
-You will see (venv) — this is good 👍
-
-📦 Step 3: Install required packages
-
-Run this command:
+# Install dependencies:
 
 pip install -r requirements.txt
 
 
-Wait until it finishes.
+---
 
-🗄 Step 4: Set up the database
-
-Run:
+## Database Setup
+Run migrations:
 
 python manage.py migrate
 
-🚀 Step 5: Start the project
+---
 
-Run:
+## Run the Project
+
+Start the development server:
 
 python manage.py runserver
 
 
-You will see something like:
+Open your browser and visit:
 
-Starting development server at http://127.0.0.1:8000/
+http://127.0.0.1:8000/
 
-🌍 Step 6: Open the website
 
-Open your browser and go to:
 
-👉 http://127.0.0.1:8000/
 
-🎉 You are done! The project is running.
+Tech Stack
 
-🛑 If something goes wrong
+- Django
 
-Try these:
+- Tailwind CSS
 
-Make sure Python is installed
-
-Make sure (venv) is activated
-
-Run commands inside the project folder
-
-❤️ Made with Django
-
-This project uses:
-
-Django
-
-Tailwind CSS
-
-SQLite (default database)
+- SQLite (default)
