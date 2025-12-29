@@ -29,12 +29,14 @@ class ChaiVarity(models.Model):
 
     def __str__(self): # This dunder method is returning the name of the item in the database 
         return self.name
-    
+   
+   
+# ORM Object Relational Models---> 
 # One to Many
 class ChaiReview(models.Model):
     chai = models.ForeignKey(ChaiVarity, on_delete=models.CASCADE, related_name='reviews')
     user = models.ForeignKey(User, on_delete = models.CASCADE)
-    rating = models.ImageField()
+    rating = models.IntegerField()
     comment = models.TextField()
     date_added = models.DateTimeField(default=timezone.now)
     
@@ -43,7 +45,7 @@ class ChaiReview(models.Model):
     
 # Many to Many
 class Store(models.Model):
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100) 
     location = models.CharField(max_length=200)
     chai_varieties = models.ManyToManyField(ChaiVarity, related_name='stores')
     
