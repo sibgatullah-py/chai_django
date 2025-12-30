@@ -8,5 +8,5 @@ def all_chai(request):
     return render(request, 'chai/all_chai.html', {'chais':chais}) # This carly braces sends values in the frontend in form of dictionary
 
 def chai_details(request, chai_id):
-    chai = get_object_or_404(ChaiVarity, pk=chai_id)
+    chai = get_object_or_404(ChaiVarity, pk=chai_id)# This will take the object if not then this will show 404
     return render(request, 'chai/chai_details.html', {'chai':chai})
