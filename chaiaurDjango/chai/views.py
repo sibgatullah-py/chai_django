@@ -9,4 +9,4 @@ def all_chai(request):
 
 def chai_details(request, chai_id):
     chai = get_object_or_404(ChaiVarity, pk=chai_id)# This will take the object if not then this will show 404
-    return render(request, 'chai/chai_details.html', {'chai':chai})
+    return render(request, 'chai/chai_details.html', {'chai':chai})# sending the data of the chai as objects in the html file 
