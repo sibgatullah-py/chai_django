@@ -2,6 +2,27 @@
 
 
 {% block content %}
-    <h1>testing store page</h1>
+ 
+<form method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">Search Store</button>
+</form>
+
+
+{% if stores %}
+    <h2>Stores available</h2>
+    <ul>
+        
+        {% for store in stores %}
+            <li>{{store.name}}-{{store.location}}</li>
+        {% endfor %}
+            
+    </ul>
+    {% else %}
+        <h3>No stores available for this chai.</h3> 
+{% endif %}
+    
+
 {% endblock content %}
     
